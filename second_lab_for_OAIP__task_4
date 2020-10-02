@@ -1,0 +1,41 @@
+#include <math.h>
+#include <iostream>
+
+void main()
+{
+	setlocale(LC_ALL, ".1251");
+	using namespace std;
+
+	int maxCoorValueCircle, maxCoorValSqere;
+	float firstCoordValue, secondCoordValue;
+	
+	string massegeValueCircle = "Введите MAX координаты окружности:";
+	string massgeValueSqere = "Введите MAX значение квадрата, который лежмт внутри акружности: ";
+	string massegeInputValue = "Введите 2-е координаты (а, у) вашей точки: ";
+
+	cout << massegeValueCircle;
+	cin >> maxCoorValueCircle;
+
+	cout << massgeValueSqere;
+	cin >> maxCoorValSqere;
+
+	cout << massegeInputValue;
+	cin >> firstCoordValue >> secondCoordValue;
+
+	if ( maxCoorValueCircle > maxCoorValSqere )
+	{
+		if (firstCoordValue && secondCoordValue < maxCoorValueCircle && firstCoordValue && secondCoordValue > maxCoorValSqere) 
+		{
+			cout << "Заданная вами точка лежит в указанном диапозоне!";
+		}
+		else
+		{
+			cout << "Заданная вами точка НЕ лежит в указанном диапозоне!";
+		}
+
+	}
+	else
+	{
+		cout << "Не подходит условию";
+	}
+}
