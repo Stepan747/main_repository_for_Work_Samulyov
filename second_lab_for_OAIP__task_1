@@ -1,0 +1,44 @@
+#include <math.h>
+#include <iostream>
+
+void main() 
+{
+	setlocale(LC_ALL, ".1251");
+	using namespace std;
+
+	int value, firstNum, secondNum, squareValue;
+
+	cout << "Введите любое число: ";
+	cin >> value;
+
+	if (value > 9 && value << 10)
+	{
+		squareValue = value * value;
+		firstNum = value / 10;
+		secondNum = value % 10;
+
+		int cube_of_firstNum =  pow(firstNum, 3);
+		int cube_of_secondNum = pow(secondNum, 3);
+
+		int sum_Cube = cube_of_firstNum + cube_of_secondNum;
+
+		int res = sum_Cube * 4;
+		cout << "Результат сложения кубов: " << res << "\n";
+
+ 		cout << "Результат: " << squareValue << "\n";
+		if (squareValue == res) 
+		{
+			cout << "Поздравляем!\n"
+				"Квадрат этого числа равен учетверенной сумме кубов его цифр! \n";
+		}
+		else 
+		{
+			cout << "К сожалению( \n"
+				"Квадрат этого числа НЕравен учетверенной сумме кубов его цифр!" << "\n";
+		}
+	}
+	else 
+	{
+		cout << "!!! Введите 2-х значное число !!!" << "\n";
+	}
+}
