@@ -1,0 +1,43 @@
+#include <iostream>
+#include <math.h>
+
+void main() 
+{
+	using namespace std;
+	setlocale(LC_ALL,".1251");
+
+	int value, valueMas;
+	float killograms;
+
+	cout << "Выберите, в чём хотите измерять число: \n"
+		"1. В милиграммах \n"
+		"2. В граммах \n"
+	    "3. В килограммах \n"
+	    "4. В тоннах \n"
+	    "5. В центнерах \n";
+		cin >> value;
+	cout << "Введите число: ";
+	cin >> valueMas;
+
+	switch (value)
+	{
+	case 1:  killograms = valueMas / 1000000;
+		cout << "Мы перевели ваше число в килограммы: " << killograms << "кг";
+		break;
+	case 2: killograms = valueMas / 1000;
+		cout << "Мы перевели ваше число в килограммы: " << killograms << "кг";
+		break;
+	case 3: killograms = valueMas / 1;
+		cout << "Мы перевели ваше число в килограммы: " << killograms << "кг";
+		break;
+	case 4: killograms = valueMas * 1000 ;
+		cout << "Мы перевели ваше число в килограммы: " << killograms << "кг";
+		break;
+	case 5: killograms = valueMas / 100;
+		cout << "Мы перевели ваше число в килограммы: " << killograms << "кг";
+		break;
+	default: cout << "Вы сделали некоректный выбор, в чем хотите измерять!";
+		break;
+	}
+
+}
