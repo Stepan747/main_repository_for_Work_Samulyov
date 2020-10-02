@@ -1,0 +1,46 @@
+#include <math.h>
+#include <iostream>
+
+void main()
+{
+	setlocale(LC_ALL, ".1251");
+	using namespace std;
+
+	int firstSide, secondSide, thirdSide;
+	cout << "Введите 3-и строны треугольника: " << "\n";
+
+	cout << "Первая сторна: ";
+	cin >> firstSide;
+
+	cout << "Bторая сторона: ";
+	cin >> secondSide;
+
+	cout << "Третья сторона: ";
+	cin >> thirdSide;
+
+	if (firstSide + secondSide > thirdSide && firstSide + thirdSide > secondSide && secondSide + thirdSide > firstSide)
+	{
+		cout << "Треугольник сущесчтвует! ";
+
+	    if (firstSide == secondSide && firstSide != thirdSide)
+		{
+			cout << "И он равнобедренный!";
+		}		
+		else if (firstSide == thirdSide && firstSide != secondSide)
+		{
+			cout << "И он равнобедренный!";
+		}		
+		else if (secondSide == thirdSide && secondSide != firstSide)
+		{
+			cout << "И он равнобедренный!";
+		}
+		else
+		{
+			cout << "Но, он не равнобедренный(";
+		}
+	}
+	else
+	{
+		cout << "!!! К сожалению, такого треугольника не существует !!!";
+	}
+}
