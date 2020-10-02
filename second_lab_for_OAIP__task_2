@@ -1,0 +1,47 @@
+#include <iostream>
+#include <math.h>
+
+int main() 
+{
+	using namespace std;
+	setlocale(LC_ALL,".1251");
+
+	float valueX;
+	int valueA;
+	cout << "Введите значение числа Х: ";
+	cin >> valueX;
+
+	cout << "Введите значение числа A: ";
+	cin >> valueA;
+
+	
+    if (valueX <= 0) 
+	{
+		float stepen4, stepen3, result;
+		stepen4 = pow(valueX, 4);
+		stepen3 = pow(valueX, 3);
+		result = stepen4 + stepen3 + valueX;
+		cout << "Результат первой функции: " << result;
+	}
+
+	else if (valueX > 0 && valueX <= valueA)
+	{
+		float e = 1.6;
+		float step4 = 0.25;
+		float stepen, koren, sum;
+		stepen = pow(e, valueX);
+		koren = pow(valueX, step4);
+		sum = stepen + koren;
+		cout << "Результат второй функции: " << sum;
+	}
+
+	else  
+	{
+		float  stepen3, stepen2, sum, res;
+		stepen3 = pow(valueX, 3);
+		stepen2 = pow(valueX, 2);
+		sum = stepen3 + stepen2;
+		res = log(sum);
+		cout << "Результат третьей функции: " << res;
+	}
+}
